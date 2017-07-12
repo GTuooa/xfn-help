@@ -1,0 +1,9 @@
+# folder
+node_modules
+coverage
+build
+
+# file
+*.DS_Store
+*.log
+*.log.*
