@@ -1,0 +1,21 @@
+@import "../../style/index.less";
+html,body{
+    font-family:PingFangSC-Medium;
+}
+.home-header {
+    position: 'fixed';
+    width: '100%';
+    background: @header-background;
+    text-align: center;
+    font-size: 24px;
+    border-bottom: 10px solid @theme-gray;
+}
+.home-wrap {
+    padding: 20px;
+    background-color: @header-background
+}
+.overflow{//文字包裹
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}

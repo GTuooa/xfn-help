@@ -1,0 +1,215 @@
+＊{
+    box-sizing: border-box;
+}
+.overflow{//文字包裹
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.clearfix {//清除浮动
+  overflow: hidden;
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+    _zoom: 1;
+  }
+}
+img{border:0;}
+.body{
+    position: relative;
+    width: 1178px;
+    margin: 100px auto 0;
+}
+.space{
+    width: 100%;
+    height: 40px;
+    background: #fdfdfd;
+    position: fixed;
+    top: 60px;
+}
+.help{
+    &-left{
+        float: left;
+        position: fixed;
+        top:100px;
+        & > h2{
+            margin-bottom: 10px;
+            padding-left: 48px;
+        }
+    }
+    &-center{
+        float: left;
+        width: 688px;
+        margin-left: 290px;
+        & > header{
+            width: 688px;
+            height: 35px;
+            color: white;
+            padding: 0 5px;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 35px;
+            margin-bottom: 18px;
+            background: #2778b2;
+            border-radius: 5px;
+            position: fixed;
+            top: 100px;
+            & > span{
+                float: right;
+                height: 28px;
+                margin-top: 3px;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 28px;
+                padding: 0 5px;
+            }
+        }
+        & .content{
+            width: 100%;
+            & hr{
+                margin: 18px 0;
+                border-bottom: none;
+                border-color: #ddd;
+                opacity: .5;
+            }
+            & .item{
+                width: 100%;
+                margin-bottom: 16px;
+                & h3{
+                    padding-left: 8px;
+                    margin-bottom: 18px;
+                    font-size: 16px;
+                    color: #333;
+                }
+                &>.content-inner{
+                    width: 672px;
+                    margin-left:16px;
+                    font-size: 14px;
+                    color: #333;
+                    & .describe{//描述
+                        line-height: 20px;
+                        font-size: 15px;
+                        color: #333;
+                        margin-bottom: 18px;
+                    }
+                    & .step{//步骤
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                        line-height: 24px;
+                        & span:nth-child(1){
+                            font-weight: bold;
+                            margin-right: 10px;
+                        }
+                    }
+                    & .QR-code{//二维码
+                        margin: 10px 0;
+                        & img{
+                            display: block;
+                            width: 150px;
+                            margin: 0 0 8px 8px;
+                        }
+                    }
+                    & .mimg{//手机端图片
+                        margin: 18px 0 24px;
+                        & li{
+                            float: left;
+                            width: 260px;
+                            & img{
+                                width: 260px;
+                            }
+                            & p{
+                                padding-top: 8px;
+                                text-align: center;
+                            }
+                        }
+                        & li:nth-Child(2){
+                            width: 64px;
+                            height: 100%;
+                            padding-top: 35%;
+                            padding-left: 17px;
+                            margin-left: 44px;
+                            & i{
+                                 font-size: 30px;
+                                 color: #adb5db;
+                            }
+                        }
+                        & li:nth-Child(3){
+                            float:right;
+                        }
+                    }
+                    & h4{
+                        font-size: 15px;
+                        font-weight: bold;
+                        margin-top: 18px;
+                    }
+                    & .pleft{//padding-left
+                        padding-left: 16px;
+                    }
+                    & .pimg{//pc端的图片样式
+                        margin: 18px 0 24px;
+                        & img{
+                            width: 672px;
+                            display: block;
+                        }
+                        & .arrow{
+                            width: 100%;
+                            height: 30px;
+                            text-align: center;
+                            margin: 18px 0;
+                        }
+                    }
+                    & .list{//列表类样式
+                        margin: 0 0 18px 18px;
+                        & li{
+                            list-style: disc;
+                            line-height: 24px;
+                        }
+                    }
+                    & .blod{//加粗
+                        font-weight: bold;
+                    }
+                    & table{
+                        border-right: 1px solid #000;
+                        border-bottom: 1px solid #000;
+                        margin: 8px 0;
+                    }
+                    & td{
+                        border-top: 1px solid #000;
+                        border-left: 1px solid #000;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    &-right{
+        width: 150px;
+        height: 300px;
+        float: left;
+        margin-left: 50px;
+        position: relative;
+    }
+}
+.ant-anchor-wrapper {
+    width: 150px;
+}
+.ant-menu-inline .ant-menu-submenu-title{
+    font-size: 16px;
+}
+.ant-menu-inline > .ant-menu-item{
+    font-size: 14px;
+}
+/*开关的样式*/
+.ant-switch{
+    background-color: white;
+}
+.ant-switch:after{
+    background-color: #2778b2;
+}
+.ant-switch-checked{
+    border-color: white;
+    background-color: white;
+}

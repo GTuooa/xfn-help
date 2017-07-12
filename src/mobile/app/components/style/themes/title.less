@@ -1,0 +1,205 @@
+@import "./common.less";
+@import "./mixins.less";
+//所有页面的宽度设定
+
+.layer{
+	position: absolute;
+	max-width: 1153px;
+	right: @body-margin-right;
+	left: @body-margin-left;
+	bottom: @body-margin-botton;
+	top: @body-margin-top;
+}
+
+// 头部栏样式
+.title {
+    width: 100%;
+    height: @other-top-bar-height;
+    line-height: @other-top-bar-height;
+    margin-bottom: 16px;
+    padding: 0 @body-margin-right 0 @body-margin-left;
+	&-bottom {
+		margin-top: 10px;
+	}
+    &-date {
+        width: 127px;
+        float: left;
+    }
+	&-checkbox {
+		margin-left: 10px;
+		line-height: 34px;
+        float: left;
+    }
+	&-checkboxtext{
+		float: left;
+		margin-right: 10px;
+	}
+    &-right {
+        float:right;
+        margin-left: @top-btn-gap;
+		&-back {
+			margin-right: 45px;
+		}
+    }
+// 设置页头部栏样式
+    &-conleft{
+        float: left;
+        // width: 63px;
+		padding: 0 15px;
+        height: @other-top-bar-height;
+        line-height: @other-top-bar-height;
+        text-align: center;
+        border: @border;
+        border-right: 0;
+		&:last-child{
+			border-right: @border;
+		}
+    }
+    &-btn{
+        margin-left: @top-btn-gap;
+    }
+    &-selectd {
+        background: #eee;
+    }
+	&-config-topbar{
+		min-width: 645px;
+	}
+}
+.title-export {
+	border: 1px solid #d9d9d9;
+	height: 28px;
+	width: 58px;
+	text-align: center;
+	border-radius: 4px;
+	float: right;
+	color: #666;
+	&:hover {
+		color: #57c5f7;
+		border: 1px solid #57c5f7;
+	}
+}
+
+.title-dropdown {
+	border: 1px solid #d9d9d9;
+	height: 27px;
+	line-height: 27px;
+	padding: 0 12px;
+	border-radius: 6px;
+}
+.title-dropdown-icon {
+	transform: scale(0.7);
+}
+
+.pconfig-table-title,
+.zcfzb-table-title,
+.lrb-table-title,
+.kmyeb-table-title,
+.cxpz-table-title,
+.qcye-table-title {
+	background: @top-li-bg;
+	border: @border;
+    overflow-y: scroll;
+    text-align: center;
+}
+.pconfig-table-body,
+.zcfzb-table-body,
+.lrb-table-body,
+.kmyeb-table-body,
+.qcye-table-body {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	top: 35px;
+	overflow-y: scroll;
+	border: @border;
+	background: @body-table-bg;
+}
+.kmyeb-table-body {
+	top: 55px;
+}
+.pconfig-table-title,
+.zcfzb-table-title,
+.lrb-table-title,
+.cxpz-table-title,
+.qcye-table-title,
+.pconfig-table-item,
+.zcfzb-table-item,
+.lrb-table-item,
+.kmyeb-table-item,
+.cxpz-table-item,
+.qcye-table-item > ul {
+	.clearfix;
+	border-bottom: @border;
+	& > li{
+        padding: 0 5px;
+		float: left;
+        .overflow;
+		border-right: @border;
+		&:last-child{
+			border-right: 0;
+		}
+	}
+}
+
+.zcfzb-table-item,
+.lrb-table-item,
+.kmyeb-table-item,
+.qcye-table-item {
+	&:nth-child(even) {
+		background-color: @top-li-bg;
+	}
+	&:nth-child(odd) {
+		background-color: #fff;
+	}
+	&:hover{
+		background-color: @hover-bg;
+	}
+}
+
+.pconfig-table-item {
+	&:nth-child(odd) {
+		background-color: #fff;
+	}
+	&:hover{
+		background-color: @hover-bg;
+	}
+}
+
+.shadow-title,
+.shadow-title-lrb,
+.shadow-title-fzhs,
+.shadow-title-mxb,
+.shadow-title-kmyeb1,
+.shadow-title-kmyeb2 {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: @shadow-wight;
+    height: @shadow-height;
+    background: @top-li-bg;
+    z-index: 9;
+}
+.shadow-title-lrb,
+.shadow-title-fzhs,
+{
+    width: 17px;
+}
+.shadow-title-fzhs {
+	left: 44.7%;
+}
+.shadow-title-mxb {
+    top: 32px;
+    width: 17px;
+}
+.shadow-title-kmyeb1 {
+    height: 24px;
+    border-bottom: @border;
+}
+.shadow-title-kmyeb2 {
+    top: 25px;
+    height: 29px;
+}
+.shadow-title-mxb-ass {
+	top: 50px;
+}

@@ -1,0 +1,232 @@
+@import "../../index.less";
+＊{
+    box-sizing: border-box;
+}
+/*移动端主体布局*/
+.header{
+    height: 0.3rem;
+    line-height: 0.3rem;
+    text-align: center;
+    font-size: .14rem;
+    color:#fff;
+    background: #5ec9f6;
+}
+.help{
+    &-center{
+        & .content{
+            & hr{
+                margin: .09rem 0.05rem;
+                border-bottom: none;
+                border-color: #ddd;
+                opacity: .5;
+            }
+            & .item{
+                padding: 0 0.04rem;
+                margin: .15rem 0.04rem;
+                & h3{
+                    margin-bottom: .09rem;
+                    font-size: .15rem;
+                    color: #333;
+                }
+                & hr{
+                    margin: .09rem 0;
+                }
+                & > .content-inner{
+                    font-size: .14rem;
+                    color: #333;
+                    & h4{
+                        font-size: .15rem;
+                        font-weight: bold;
+                        margin-top: .15rem;
+                    }
+                    & .describe{//描述
+                        line-height: .20rem;
+                        margin-bottom: .15rem;
+                    }
+                    & .step{//步骤
+                        margin-bottom: .10rem;
+                        line-height: .2rem;
+                        & span:nth-child(1){
+                            font-weight: bold;
+                            margin-right: .10rem;
+                        }
+                    }
+                    & .QR-code{//二维码
+                        margin: .10rem 0;
+                        & img{
+                            display: block;
+                            width: 1.50rem;
+                            margin: 0 0 .08rem .08rem;
+                        }
+                    }
+                    & .mimg{//手机端图片
+                        margin: .15rem 0 .2rem;
+                        display: flex;
+                        width: 100%;
+                        & li{
+                            //width: 1.5rem;
+                            flex: 1;
+                            &:nth-child(1){
+                                margin-right: .03rem;
+                            }
+                            & img{
+                                width: 100%;
+                            }
+                            & p{
+                                padding-top: .08rem;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    & .pleft{//padding-left
+                        padding-left: .14rem;
+                    }
+                    & .pimg{//pc端的图片样式
+                        margin: .18rem 0 .2rem;
+                        & img{
+                            width: 100%;
+                            display: block;
+                        }
+                        & .arrow{//箭头
+                            width: 100%;
+                            height: .30rem;
+                            color: #adb5db;
+                            font-size: .2rem;
+                            text-align: center;
+                            margin: .15rem 0;
+                        }
+                    }
+                    & .list{//列表类样式
+                        margin: 0 0 .15rem .3rem;
+                        & li{
+                            list-style: disc;
+                            line-height: .2rem;
+                        }
+                    }
+                    & .blod{//加粗
+                        font-weight: bold;
+                    }
+                    & table{
+                        border-collapse:collapse;
+                        margin: .08rem 0;
+                    }
+                    & td{
+                        border: .01rem solid #000;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+/*移动端布局*/
+.all{
+    height: 100%;
+    overflow: hidden;
+}
+.wrap{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+}
+.row{
+    background-color: #fff;
+    margin: 0.1rem 0.05rem;
+    padding:0 .1rem;
+    & h3{
+        color:#216799;
+        height: 0.4rem;
+        line-height: 0.4rem;
+        font-size: 0.13rem;
+    }
+    & .item-list{
+        & li{
+            height: 0.3rem;
+            line-height: 0.3rem;
+            color:#666;
+            display: flex;
+            & span{
+                display: block;
+                width: 0.02rem;
+                height: .1rem;
+                float: left;
+                margin-right: .1rem;
+                margin-top: 0.1rem;
+                background-color: #a3daff;
+            }
+            & a{
+                flex: 1;
+                font-size: 0.13rem;
+                color:#666666;
+            }
+            & a:nth-child(3){
+                text-align: right;
+                margin-right: 0;
+                font-size: 0.13rem;
+                color:#216799;
+            }
+        }
+
+    }
+}
+.footer{
+    width: 100%;
+    height: 0.4rem;
+    font-size: 0.15rem;
+    line-height: 0.4rem;
+    color:#ffffff;
+    text-align: center;
+    background-color: #5ec9f6;
+    display: flex;
+    align-items: center;
+    & a:nth-child(1){
+        flex: 1;
+        color:#ffffff;
+        text-align: left;
+        padding-left: .1rem;
+    }
+    & > span:nth-child(2){
+        width: 50%;
+        text-align: center;
+        & i{
+            padding-left: .05rem;
+            font-weight: bold;
+        }
+    }
+    & a:nth-child(3){
+        flex: 1;
+        color:#ffffff;
+        text-align: right;
+        padding-right: .1rem;
+        font-weight: bold;
+    }
+}
+.all-list{
+    flex: 1;
+    width: 100%;
+    background-color: #ffffff;
+    margin: .1rem 0;
+    overflow:auto;/* winphone8和android4+ */
+    -webkit-overflow-scrolling: touch; /* ios5+ */
+    & li{
+        width: 100%;
+        height: .44rem;
+        line-height: .44rem;
+        padding: 0 .1rem;
+        border-bottom: .01rem solid #ddd;
+        & a{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            color:#333;
+            font-size: .15rem;
+            & span{
+                color:#333;
+            }
+        }
+    }
+}
