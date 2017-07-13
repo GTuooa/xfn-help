@@ -16,7 +16,7 @@ path ();
 let store = customStore(Reducers)
 
 ReactDOM.render(
-    <Provider  store={store}>
+    <Provider store={store}>
         <CreateRouter />
     </Provider>,
     document.getElementById('root')
